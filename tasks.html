@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    
+    <h1 class="todo-h1">To-Do List</h1>
+    <div class="wrapper">
+        <form>
+            <input id ="todo-input" type="text" placeholder="Add a task">
+            <button id="add-task" type="submit">Add</button>
+        </form>
+        
+        <ul id="todo-list">
+            <li class="todo">
+                <input type="checkbox" id="task-1">
+
+                <label class="custom-checkbox" for="task-1">
+                    <svg fill="transparent" xmlns="icons/checkbox.svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.4-1.4z"/>
+                    </svg>
+                    
+                </label>
+                <label for="todo-1" class="todo-text">
+                    webdev project with html, css, and js
+                </label>
+                <button class="delete-button">
+                    <svg  xmlns="icons/trash.svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+
+</body> 
+</html>   

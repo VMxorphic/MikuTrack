@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
 </head>
 
@@ -10,12 +12,18 @@
 
     <div class="grid-container-music">
         <div class="box-black" style="grid-area: box-2;">
+            <img src="images/ui/mikuiconmusic.jpg" alt="Miku Music Icon" class="miku-music-icon">
         </div>
     </div>
 
 
 
-    <hr class="thick-hr">
+    <div class="thick-line">
+        <button  class="main-button" id="pomodoro-button" href="index.html">Pomodoro</button>
+        <button  class="main-button" id="music-button" href="music.html">Music</button>
+        <button  class="main-button" id="tasks-button" href="tasks.html">Tasks</button>
+    </div>
+    
 
 
     <div class="grid-container-pomodoro">
@@ -30,10 +38,10 @@
         </div>
 
     </div>
+    
     <script src="pomodoro.js"></script>
 
 
 </body>
-
 
 </html>

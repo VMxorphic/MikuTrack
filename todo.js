@@ -4,6 +4,21 @@ const todoListUL=document.getElementById("todo-list");
 let allTodos=loadTodos();
 updateTodoList();
 
+const pomodoroButton=document.getElementById("pomodoro-button");
+const musicButton=document.getElementById("music-button");
+const tasksButton=document.getElementById("tasks-button");
+
+function navigateToPage(button, pageUrl) {
+    button.addEventListener("click", () => {
+        window.location.href = pageUrl;
+    });
+}
+
+navigateToPage(pomodoroButton, "index.html");
+navigateToPage(musicButton, "music.html");
+navigateToPage(tasksButton, "tasks.html");
+
+
 todoForm.addEventListener("submit",function(e){
     e.preventDefault();
     addTodo();

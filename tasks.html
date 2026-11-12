@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
 </head>
 <body>
     
     <h1 class="todo-h1">To-Do List</h1>
-    <div class="wrapper">
+    <div class="thick-line">
+        <button  class="main-button" id="pomodoro-button" href="index.html">Pomodoro</button>
+        <button  class="main-button" id="music-button" href="music.html">Music</button>
+        <button  class="main-button" id="tasks-button" href="tasks.html">Tasks</button>
+    </div>
+    <center><div class="wrapper">
         <form>
             <input id ="todo-input" type="text" placeholder="Add a task">
-            <button id="add-task" type="submit">Add</button>
+            <button class="add-button" id="add-task" type="submit">ADD</button>
         </form>
         
         <ul id="todo-list">
@@ -35,7 +42,7 @@
                 </button>
             </li>
         </ul>
-    </div>
+    </div></center>
     <script src="todo.js"></script>
 
 </body> 

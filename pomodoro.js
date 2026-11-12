@@ -3,6 +3,23 @@ const timer= document.getElementById("timer");
 const reset=document.getElementById("reset");
 const stop=document.getElementById("stop");
 
+const pomodoroButton=document.getElementById("pomodoro-button");
+const musicButton=document.getElementById("music-button");
+const tasksButton=document.getElementById("tasks-button");
+
+function navigateToPage(button, pageUrl) {
+    button.addEventListener("click", () => {
+        window.location.href = pageUrl;
+    });
+}
+
+navigateToPage(pomodoroButton, "index.html");
+navigateToPage(musicButton, "music.html");
+navigateToPage(tasksButton, "tasks.html");
+
+
+
+
 let timerleft=1500;
 let interval;
 
@@ -15,6 +32,7 @@ const updatetimer= ()=>{
 };
 
 const starttimer=()=>{
+    start.disabled=true;
     interval=setInterval(() => {
         timerleft--;
         updatetimer();
@@ -29,9 +47,14 @@ const starttimer=()=>{
 
 };
 
-const stoptimer=() => clearInterval(interval);
+const stoptimer=() =>{
+    start.disabled=false;
+    clearInterval(interval);
+}
+
 
 const resettimer=() =>{
+    start.disabled=false;
     clearInterval(interval);
     timerleft=1500;
     updatetimer();

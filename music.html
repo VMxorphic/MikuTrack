@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+</head>
+
+
+
+<body>
+    <div class="thick-line">
+        <button  class="main-button" id="pomodoro-button" href="index.html">Pomodoro</button>
+        <button  class="main-button" id="music-button" href="music.html">Music</button>
+        <button  class="main-button" id="tasks-button" href="tasks.html">Tasks</button>
+    </div>
+
+
+    <h1 class="h1-music">Music</h1>
+
+    
+    <center><div class="wrapper">
+        <form autocomplete="off" id="spotify-form">
+            <input id ="iframe-input" type="text" placeholder="Add a Spotify Iframe">
+            <button class="add-iframe-button" type="submit">ADD</button>
+        </form>
+        <div class="music-box">
+            <iframe id="embed-iframe" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2rWUPo6aFtDDD63CdY9XH2?utm_source=generator&si=4e4be27bb8ac4aad" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div></center>
+    
+    
+
+
+    
+
+
+
+
+
+    
+    <script src="music.js"></script>
+</body>
+</html>

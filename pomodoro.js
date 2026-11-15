@@ -40,7 +40,7 @@ const starttimer=()=>{
         saveTimer();
         if(timerleft===0){
             clearInterval(interval);
-            alert("time is up")
+            alert("time is up !")
             timerleft=1500;
             updatetimer();
         }

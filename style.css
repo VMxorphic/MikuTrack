@@ -26,7 +26,6 @@
         border: 0px;
     }
 }
-
 @layer pomodoro{
     body {
       margin: 0;
@@ -40,7 +39,7 @@
     .box-blueish{
         position: relative;
         margin-top: -30px;
-        background-color: #b9e8ee;
+        background-color: #abf2ff;
         border-radius: 20px;
         z-index: 1;
     }
@@ -81,12 +80,10 @@
         border-radius: 15px;
         cursor: pointer;
         color: #021653;
-        border: 5px solid #f944a5;
+        border: 5px solid #e67ab8;
     }
     
 }
-
-
 @layer musicbox{ 
     
     
@@ -109,7 +106,9 @@
     }
 }
 
-    .grid-container-music{
+
+
+.grid-container-music{
         display: flex;
         justify-content: center;
         display: grid;
@@ -119,8 +118,8 @@
         grid-auto-rows: 1fr;
         grid-template-areas: 
         "box-2";
-    }
-    .music-box{
+}
+.music-box{
         justify-content: center;
         display: flex;
         position: relative;
@@ -128,12 +127,7 @@
         margin-left: 200px;
         margin-right: 200px;
         margin-bottom: 50px;
-    }
-    
-    
-
-
-
+}
 @layer responsive {
     @media (max-width: 56em) {
         .grid-container-music {
@@ -270,10 +264,12 @@ input[type="checkbox"]{
 }
 
 
+
+
+
 .music-box{
     margin-top: 50px;
 }
-
 .h1-music{
     font-family: mikuthemefont;
     margin-bottom: 0px;
@@ -284,8 +280,6 @@ input[type="checkbox"]{
     font-size: 100px;
     color: #021653;
 }
-
-
 #iframe-input {
     font-family: mikuthemefont;
     display: inline-block;
@@ -308,7 +302,6 @@ input[type="checkbox"]{
     
     outline: none;
 }
-
 .add-iframe-button {
     font-family: mikuthemefont;
     display: inline-block;
@@ -325,4 +318,12 @@ input[type="checkbox"]{
     color: rgb(7, 33, 25);
     border: 0px;
     
+}
+
+
+
+
+::selection {
+    background-color: #4fb9e0;
+    color: #2f4197;
 }

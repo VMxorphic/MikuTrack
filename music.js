@@ -13,6 +13,13 @@ navigateToPage(musicButton, "music.html");
 navigateToPage(tasksButton, "tasks.html");
 
 
+
+
+
+
+
+
+
 const form = document.querySelector("#spotify-form");
 const input = document.getElementById("iframe-input");
 const iframe = document.getElementById("embed-iframe");
@@ -22,16 +29,14 @@ if (savedSongUrl && iframe) {
     updateIframe(savedSongUrl);
 }
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); 
-    
+form.addEventListener('submit',function(e){
+    e.preventDefault();
     let url = input.value.trim();
-
-    if (url.includes('open.spotify.com')) {
+    if (url.includes('open.spotify.com')){
         let cleanUrl = url.split('?')[0];
         let embedUrl = cleanUrl.replace('open.spotify.com/', 'open.spotify.com/embed/');
         
-        if (embedUrl.includes('/artist/')) {
+        if (embedUrl.includes('/artist/')){
             iframe.height = "450";
         } else {
             iframe.height = "352"; 
@@ -39,15 +44,17 @@ form.addEventListener('submit', function(e) {
         updateIframe(embedUrl);
         savesong(embedUrl);
         input.value = "";
-      
     } else {
         alert("Please enter a valid Spotify URL.");
     }
 });
+
+
+
+
 function savesong(url) {
     localStorage.setItem("song", JSON.stringify(url));
 }
-
 function loadsong() {
 
     const song = localStorage.getItem("song");
